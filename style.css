@@ -1,0 +1,341 @@
+:root {
+  --crema: #EFE6CE;
+  --oliva: #6E6E3E;
+  --ladrillo: #B5533C;
+  --cafe: #3E2F23;
+  --linea-clara: #DCD2AE;
+  --blanco: #FFFFFF;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--crema);
+  color: var(--cafe);
+}
+
+h1, h2, h3, h4, .brand-font {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-pethome {
+  background-color: var(--cafe);
+  padding-top: .9rem;
+  padding-bottom: .9rem;
+}
+.navbar-pethome .navbar-brand {
+  color: var(--crema) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-pethome .navbar-brand img {
+  height: 40px;
+}
+.navbar-pethome .nav-link {
+  color: var(--linea-clara) !important;
+  font-weight: 600;
+  margin: 0 6px;
+  position: relative;
+  transition: color .25s ease;
+}
+.navbar-pethome .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: var(--ladrillo);
+  transition: width .3s ease;
+}
+.navbar-pethome .nav-link:hover {
+  color: var(--crema) !important;
+}
+.navbar-pethome .nav-link:hover::after,
+.navbar-pethome .nav-link.active::after {
+  width: 100%;
+}
+.navbar-pethome .nav-link.active {
+  color: var(--crema) !important;
+}
+.btn-cta {
+  background-color: var(--ladrillo);
+  color: var(--crema);
+  border: none;
+  font-weight: 600;
+  padding: .55rem 1.4rem;
+  border-radius: 30px;
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+.btn-cta:hover {
+  background-color: #9c4632;
+  color: var(--crema);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(181, 83, 60, 0.35);
+}
+.btn-outline-pethome {
+  border: 2px solid var(--oliva);
+  color: var(--oliva);
+  font-weight: 600;
+  border-radius: 30px;
+  padding: .5rem 1.3rem;
+  transition: all .25s ease;
+  background: transparent;
+}
+.btn-outline-pethome:hover {
+  background-color: var(--oliva);
+  color: var(--crema);
+  transform: translateY(-3px);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: radial-gradient(circle at top right, #f7f1de 0%, var(--crema) 55%);
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "🐾";
+  position: absolute;
+  font-size: 12rem;
+  opacity: .05;
+  right: -30px;
+  top: -30px;
+  transform: rotate(15deg);
+}
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--cafe);
+}
+.hero .accent {
+  color: var(--ladrillo);
+}
+.hero p.lead {
+  color: #5a4d3d;
+  max-width: 480px;
+}
+.hero img.hero-logo {
+  max-width: 340px;
+  filter: drop-shadow(0 20px 25px rgba(62,47,35,.25));
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+/* ---------- Sections ---------- */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title h2 {
+  font-weight: 700;
+  color: var(--cafe);
+}
+.section-title .divider {
+  width: 70px;
+  height: 4px;
+  background: var(--ladrillo);
+  margin: 14px auto 0;
+  border-radius: 4px;
+}
+.bg-oliva-suave { background-color: #f5f1e2; }
+
+/* ---------- Cards ---------- */
+.card-pethome {
+  background: var(--blanco);
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(62,47,35,.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+.card-pethome:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 34px rgba(62,47,35,.18);
+}
+.card-pethome .icon-circle {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--linea-clara);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+.badge-estado {
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .35em .8em;
+  border-radius: 20px;
+}
+.badge-disponible { background: var(--oliva); color: var(--crema); }
+.badge-proceso { background: var(--ladrillo); color: var(--crema); }
+.badge-adoptado { background: #8a8370; color: var(--crema); }
+
+.pet-photo {
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Team ---------- */
+.team-avatar {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: var(--linea-clara);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.2rem;
+  color: var(--ladrillo);
+  margin: 0 auto 16px;
+  border: 4px solid var(--blanco);
+  box-shadow: 0 8px 20px rgba(62,47,35,.15);
+}
+
+/* ---------- Timeline (Cómo funciona) ---------- */
+.timeline-step {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 40px;
+}
+.timeline-step .step-number {
+  position: absolute;
+  left: 0; top: 0;
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: var(--ladrillo);
+  color: var(--crema);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  box-shadow: 0 8px 16px rgba(181,83,60,.35);
+}
+.timeline-step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 24px; top: 50px;
+  width: 2px; height: calc(100% + 5px);
+  background: var(--linea-clara);
+}
+
+/* ---------- Auth (login/registro) ---------- */
+.auth-wrapper {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 15px;
+  background: radial-gradient(circle at top left, #f7f1de 0%, var(--crema) 60%);
+}
+.auth-card {
+  background: var(--blanco);
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(62,47,35,.18);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+.auth-side {
+  background: linear-gradient(160deg, var(--oliva), #565a30);
+  color: var(--crema);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.auth-side img { max-width: 160px; margin-bottom: 20px; }
+.auth-form-side { padding: 50px 40px; }
+.nav-pills-auth .nav-link {
+  color: var(--cafe);
+  font-weight: 600;
+  border-radius: 30px;
+}
+.nav-pills-auth .nav-link.active {
+  background-color: var(--ladrillo) !important;
+  color: var(--crema) !important;
+}
+.form-control-pethome {
+  border-radius: 12px;
+  border: 1.5px solid var(--linea-clara);
+  padding: .65rem 1rem;
+}
+.form-control-pethome:focus {
+  border-color: var(--oliva);
+  box-shadow: 0 0 0 .2rem rgba(110,110,62,.15);
+}
+.role-choice {
+  border: 2px solid var(--linea-clara);
+  border-radius: 14px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all .2s ease;
+  text-align: center;
+}
+.role-choice.active, .role-choice:hover {
+  border-color: var(--ladrillo);
+  background: #fbf3ee;
+}
+
+/* ---------- Footer ---------- */
+footer.footer-pethome {
+  background: var(--cafe);
+  color: var(--linea-clara);
+  padding: 50px 0 20px;
+}
+footer.footer-pethome h5 { color: var(--crema); }
+footer.footer-pethome a { color: var(--linea-clara); text-decoration: none; }
+footer.footer-pethome a:hover { color: var(--crema); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: 30px;
+  padding-top: 16px;
+  font-size: .85rem;
+  text-align: center;
+  color: #a89f8c;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Filter buttons (catálogo) ---------- */
+.filtro-btn {
+  border: 2px solid var(--oliva);
+  color: var(--oliva);
+  background: transparent;
+  border-radius: 30px;
+  padding: .4rem 1.2rem;
+  font-weight: 600;
+  margin: 0 5px 10px;
+  transition: all .2s ease;
+}
+.filtro-btn.active, .filtro-btn:hover {
+  background: var(--oliva);
+  color: var(--crema);
+}
+
+/* ---------- FAQ ---------- */
+.accordion-pethome .accordion-button {
+  font-weight: 600;
+  color: var(--cafe);
+  background-color: var(--blanco);
+}
+.accordion-pethome .accordion-button:not(.collapsed) {
+  background-color: var(--linea-clara);
+  color: var(--cafe);
+}
+.accordion-pethome .accordion-button:focus { box-shadow: none; }

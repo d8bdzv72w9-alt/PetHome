@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo funciona - PetHome</title>
+<link rel="icon" href="logo-icon.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-pethome">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="logo-icon.png" alt="PetHome">PetHome</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link active" href="como-funciona.html">Cómo funciona</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-cta" href="login.html">Ingresar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero py-5">
+  <div class="container text-center reveal">
+    <h1>¿Cómo <span class="accent">funciona</span>?</h1>
+    <p class="lead mx-auto">Adoptar o publicar una mascota en PetHome toma solo unos minutos. Así de simple es el proceso.</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+
+        <div class="timeline-step reveal">
+          <div class="step-number">1</div>
+          <h5 class="fw-bold">Crea tu cuenta</h5>
+          <p>Regístrate como <strong>Adoptante</strong> si buscas una mascota, o como <strong>Refugio</strong> si quieres publicar animales disponibles. Solo necesitas usuario, correo y contraseña.</p>
+        </div>
+
+        <div class="timeline-step reveal">
+          <div class="step-number">2</div>
+          <h5 class="fw-bold">Explora o publica</h5>
+          <p>Como adoptante, navega el catálogo y filtra por especie, edad o raza. Como refugio, registra a tus mascotas con foto, temperamento y estado de salud.</p>
+        </div>
+
+        <div class="timeline-step reveal">
+          <div class="step-number">3</div>
+          <h5 class="fw-bold">Envía o recibe una solicitud</h5>
+          <p>El adoptante envía una solicitud de adopción con un mensaje para el refugio. El refugio revisa la solicitud junto con los datos de contacto del interesado.</p>
+        </div>
+
+        <div class="timeline-step reveal">
+          <div class="step-number">4</div>
+          <h5 class="fw-bold">Aprobación</h5>
+          <p>El refugio aprueba o rechaza la solicitud. Si se aprueba, la mascota cambia su estado a "adoptada" y las demás solicitudes pendientes para ese animal se cierran automáticamente.</p>
+        </div>
+
+        <div class="timeline-step reveal">
+          <div class="step-number">5</div>
+          <h5 class="fw-bold">¡Nuevo hogar!</h5>
+          <p>Refugio y adoptante coordinan la entrega directamente. PetHome se encarga de conectar, el resto es cariño.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-oliva-suave">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>Preguntas frecuentes</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto reveal">
+        <div class="accordion accordion-pethome" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                ¿Cuánto cuesta usar PetHome?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Nada. Es completamente gratuito tanto para refugios como para adoptantes.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                ¿PetHome cobra por la adopción?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">No. PetHome no procesa pagos; cualquier acuerdo sobre la adopción se coordina directamente entre el refugio y el adoptante.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                ¿Cómo sé si mi solicitud fue aceptada?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Puedes consultar el estado de tus solicitudes (pendiente, aprobada o rechazada) desde tu panel de adoptante en cualquier momento.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                ¿Cualquier refugio puede publicar mascotas?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Sí, cualquier refugio o rescatista independiente puede registrarse y publicar las mascotas que tenga disponibles para adopción.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" style="background: var(--cafe);">
+  <div class="container text-center reveal">
+    <h2 class="text-white mb-3">Empieza hoy mismo</h2>
+    <a href="login.html" class="btn btn-cta btn-lg">Crear cuenta gratis</a>
+  </div>
+</section>
+
+<footer class="footer-pethome">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5>PetHome</h5>
+        <p>cada hogar merece una cola feliz</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Enlaces</h5>
+        <p><a href="index.html">Inicio</a></p>
+        <p><a href="nosotros.html">Nosotros</a></p>
+        <p><a href="contacto.html">Contacto</a></p>
+      </div>
+      <div class="col-md-4">
+        <h5>Grupo TechCare</h5>
+        <p class="mb-0">Instituto Nacional General Francisco Menéndez</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 PetHome — Proyecto Módulo 3.1, Grupo TechCare</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
