@@ -31,9 +31,7 @@ h1, h2, h3, h4, .brand-font {
   align-items: center;
   gap: 10px;
 }
-.navbar-pethome .navbar-brand img {
-  height: 40px;
-}
+.navbar-pethome .navbar-brand img { height: 40px; }
 .navbar-pethome .nav-link {
   color: var(--linea-clara) !important;
   font-weight: 600;
@@ -50,16 +48,11 @@ h1, h2, h3, h4, .brand-font {
   background: var(--ladrillo);
   transition: width .3s ease;
 }
-.navbar-pethome .nav-link:hover {
-  color: var(--crema) !important;
-}
+.navbar-pethome .nav-link:hover { color: var(--crema) !important; }
 .navbar-pethome .nav-link:hover::after,
-.navbar-pethome .nav-link.active::after {
-  width: 100%;
-}
-.navbar-pethome .nav-link.active {
-  color: var(--crema) !important;
-}
+.navbar-pethome .nav-link.active::after { width: 100%; }
+.navbar-pethome .nav-link.active { color: var(--crema) !important; }
+
 .btn-cta {
   background-color: var(--ladrillo);
   color: var(--crema);
@@ -111,12 +104,10 @@ h1, h2, h3, h4, .brand-font {
   font-weight: 700;
   color: var(--cafe);
 }
-.hero .accent {
-  color: var(--ladrillo);
-}
+.hero .accent { color: var(--ladrillo); }
 .hero p.lead {
   color: #5a4d3d;
-  max-width: 480px;
+  max-width: 520px;
 }
 .hero img.hero-logo {
   max-width: 340px;
@@ -179,25 +170,44 @@ h1, h2, h3, h4, .brand-font {
 .badge-adoptado { background: #8a8370; color: var(--crema); }
 
 .pet-photo {
-  height: 210px;
+  height: 230px;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+.pet-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(62,47,35,.18), transparent 45%);
 }
 
 /* ---------- Team ---------- */
 .team-avatar {
-  width: 110px; height: 110px;
+  width: 130px; /* Un poquito más grande para que se vea bien la foto */
+  height: 130px;
   border-radius: 50%;
   background: var(--linea-clara);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2.2rem;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 2.5rem;
   color: var(--ladrillo);
   margin: 0 auto 16px;
   border: 4px solid var(--blanco);
   box-shadow: 0 8px 20px rgba(62,47,35,.15);
+  overflow: hidden; /* Para que la foto no se salga del círculo */
 }
 
-/* ---------- Timeline (Cómo funciona) ---------- */
+/* Nueva regla para las fotos dentro del avatar */
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la foto para que llene el círculo sin deformarse */
+  display: block;
+}
+
+/* ---------- Timeline ---------- */
 .timeline-step {
   position: relative;
   padding-left: 70px;
@@ -223,7 +233,7 @@ h1, h2, h3, h4, .brand-font {
   background: var(--linea-clara);
 }
 
-/* ---------- Auth (login/registro) ---------- */
+/* ---------- Auth ---------- */
 .auth-wrapper {
   min-height: calc(100vh - 76px);
   display: flex;
@@ -312,7 +322,7 @@ footer.footer-pethome a:hover { color: var(--crema); }
   transform: translateY(0);
 }
 
-/* ---------- Filter buttons (catálogo) ---------- */
+/* ---------- Filter buttons ---------- */
 .filtro-btn {
   border: 2px solid var(--oliva);
   color: var(--oliva);
@@ -339,3 +349,191 @@ footer.footer-pethome a:hover { color: var(--crema); }
   color: var(--cafe);
 }
 .accordion-pethome .accordion-button:focus { box-shadow: none; }
+
+/* =========================================================
+   NUEVO: detalles para que la página se sienta más humana
+   ========================================================= */
+
+.texto-humano {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #5a4d3d;
+}
+
+.human-strip {
+  background: linear-gradient(135deg, #fffaf0, #f5f1e2);
+  border: 1px solid var(--linea-clara);
+  border-radius: 22px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 24px rgba(62,47,35,.06);
+}
+
+.human-strip strong { color: var(--ladrillo); }
+
+.quote-card {
+  background: var(--blanco);
+  border-left: 6px solid var(--ladrillo);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 26px rgba(62,47,35,.08);
+  height: 100%;
+}
+.quote-card p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--cafe);
+}
+.quote-card .firma {
+  font-family: 'Poppins', sans-serif;
+  font-size: .88rem;
+  font-weight: 600;
+  color: #6b5c49;
+}
+
+.story-card {
+  height: 100%;
+}
+.story-card .story-photo {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.story-card .story-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(62,47,35,.35), transparent 55%);
+}
+.story-card .story-label {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  z-index: 1;
+  background: rgba(239,230,206,.92);
+  color: var(--cafe);
+  padding: .3rem .75rem;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.pet-personality {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 12px;
+}
+.pet-tag {
+  background: #f8f3e7;
+  border: 1px solid var(--linea-clara);
+  color: var(--cafe);
+  border-radius: 999px;
+  padding: .22rem .62rem;
+  font-size: .74rem;
+  font-weight: 600;
+}
+
+.pet-quote {
+  font-size: .9rem;
+  color: #5a4d3d;
+  font-style: italic;
+  border-left: 3px solid var(--linea-clara);
+  padding-left: 10px;
+  margin-bottom: 12px;
+}
+
+.btn-link-pethome {
+  color: var(--ladrillo);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-link-pethome:hover {
+  color: #9c4632;
+  text-decoration: underline;
+}
+
+.compromiso-box {
+  background: var(--blanco);
+  border: 1px dashed var(--ladrillo);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 22px rgba(62,47,35,.06);
+  height: 100%;
+}
+
+.check-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.check-list li {
+  margin-bottom: .55rem;
+  padding-left: 1.6rem;
+  position: relative;
+}
+.check-list li::before {
+  content: "🐾";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: .9rem;
+}
+
+.testimonial-card {
+  background: var(--blanco);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(62,47,35,.08);
+  height: 100%;
+}
+.testimonial-card .avatar-emoji {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--linea-clara);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+.testimonial-card p {
+  font-size: .94rem;
+  color: #4d4033;
+}
+.testimonial-card .nombre {
+  font-weight: 700;
+  font-size: .88rem;
+  color: var(--cafe);
+}
+.testimonial-card .rol {
+  font-size: .78rem;
+  color: #7c6d5a;
+}
+
+.refugio-card {
+  background: var(--blanco);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(62,47,35,.08);
+  height: 100%;
+  border-top: 5px solid var(--oliva);
+}
+
+.photo-frame {
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 35px rgba(62,47,35,.18);
+}
+
+.small-note {
+  font-size: .82rem;
+  color: #7c6d5a;
+}
+
+#filtro-contador {
+  color: #6b5c49;
+  font-weight: 600;
+}
