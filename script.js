@@ -22,9 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ---- Filtro de catálogo (si existe en la página) ----
+  // ---- Filtro de catálogo + contador humano ----
   const filtroBtns = document.querySelectorAll(".filtro-btn");
   const petCards = document.querySelectorAll(".pet-card-item");
+  const contador = document.getElementById("filtro-contador");
+
+  function actualizarContador() {
+    if (!contador) return;
+    const visibles = Array.from(petCards).filter(
+      (card) => card.style.display !== "none"
+    ).length;
+    contador.textContent = visibles === 1
+      ? "1 mascota esperando una familia"
+      : `${visibles} mascotas esperando una familia`;
+  }
+
   if (filtroBtns.length) {
     filtroBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -38,8 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
             card.style.display = "none";
           }
         });
+        actualizarContador();
       });
     });
+    actualizarContador();
   }
 
   // ---- Selección visual de rol (registro) ----
@@ -69,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ---- Evita que el carrusel "salte" el contenido de abajo al cambiar de slide ----
+  // ---- Evita que el carrusel "salte" el contenido de abajo ----
   document.querySelectorAll(".carousel").forEach((carousel) => {
     const inner = carousel.querySelector(".carousel-inner");
     const items = carousel.querySelectorAll(".carousel-item");
@@ -96,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ajustarAlturaCarrusel();
     window.addEventListener("resize", ajustarAlturaCarrusel);
     carousel.addEventListener("slid.bs.carousel", ajustarAlturaCarrusel);
-    // Recalcula cuando las fotos reales de las mascotas terminen de cargar
     carousel.querySelectorAll("img").forEach((img) => {
       img.addEventListener("load", ajustarAlturaCarrusel);
     });
