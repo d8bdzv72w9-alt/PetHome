@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contacto - PetHome</title>
+<title>Mascotas que buscan hogar - PetHome</title>
 <link rel="icon" href="logo-icon.png">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,8 +22,8 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="como-funciona.html">Cómo funciona</a></li>
-        <li class="nav-item"><a class="nav-link" href="catalogo.html">Mascotas</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link active" href="catalogo.html">Mascotas</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         <li class="nav-item ms-lg-2"><a class="btn btn-cta" href="login.html">Ingresar</a></li>
       </ul>
     </div>
@@ -32,88 +32,228 @@
 
 <section class="hero py-5">
   <div class="container text-center reveal">
-    <h1>Hablemos de <span class="accent">segundas oportunidades</span></h1>
+    <h1>Ellos ya tienen <span class="accent">nombre</span></h1>
     <p class="lead mx-auto">
-      ¿Tienes dudas sobre una adopción, quieres registrar tu refugio o ayudar de otra forma?
-      Escríbenos. Detrás de este formulario también hay personas.
+      Aquí no verás “productos”. Verás mascotas con historia, personalidad y una familia que todavía están esperando.
+      Lee su historia antes de enviar una solicitud: adoptar es un compromiso, no una compra.
     </p>
   </div>
 </section>
 
-<section class="py-5">
+<section class="pb-4">
+  <div class="container reveal">
+    <div class="human-strip text-center">
+      <strong>PetHome no vende mascotas.</strong> Conectamos refugios y familias para dar segundas oportunidades.
+      Si buscas “comprar”, este no es el lugar. Si buscas <strong>adoptar con responsabilidad</strong>, estás en el lugar correcto. 🐾
+    </div>
+  </div>
+</section>
+
+<section class="py-3">
+  <div class="container text-center reveal">
+    <button class="filtro-btn active" data-especie="todas">Todas</button>
+    <button class="filtro-btn" data-especie="perro">Perros</button>
+    <button class="filtro-btn" data-especie="gato">Gatos</button>
+    <p id="filtro-contador" class="small mt-2 mb-0"></p>
+  </div>
+</section>
+
+<section class="pb-5">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-4">
 
-      <div class="col-12 col-lg-5 reveal">
-        <div class="card-pethome p-4 p-md-5 h-100">
-          <h4 class="fw-bold mb-4">Información de contacto</h4>
-
-          <div class="d-flex align-items-start mb-4">
-            <div class="icon-circle me-3 flex-shrink-0">📍</div>
-            <div>
-              <h6 class="fw-bold mb-1">Ubicación</h6>
-              <p class="mb-0">San Salvador, El Salvador</p>
+      <!-- MUGSY -->
+      <div class="col-md-4 pet-card-item reveal" data-especie="perro">
+        <div class="card-pethome">
+          <div class="pet-photo" style="background-image:url('pug.jpg');"></div>
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="fw-bold mb-1">Mugsy</h5>
+              <span class="badge-estado badge-disponible">Esperando familia</span>
             </div>
-          </div>
-
-          <div class="d-flex align-items-start mb-4">
-            <div class="icon-circle me-3 flex-shrink-0">📧</div>
-            <div>
-              <h6 class="fw-bold mb-1">Correo</h6>
-              <p class="mb-0">contacto@pethome.example.com</p>
+            <p class="mb-1 text-muted">Perro · Pug · 3 años</p>
+            <div class="pet-personality">
+              <span class="pet-tag">Juguetón</span>
+              <span class="pet-tag">Sociable</span>
+              <span class="pet-tag">Vacunado</span>
             </div>
-          </div>
+            <p class="pet-quote">“Me encanta acompañar a las personas y mover la cola cuando me hablan.”</p>
+            <p class="mb-2 small"><strong>Refugio:</strong> Patitas Felices</p>
 
-          <div class="d-flex align-items-start">
-            <div class="icon-circle me-3 flex-shrink-0">📞</div>
-            <div>
-              <h6 class="fw-bold mb-1">Teléfono</h6>
-              <p class="mb-0">7000-0000</p>
+            <button class="btn btn-link-pethome p-0 mb-2" data-bs-toggle="collapse" data-bs-target="#historiaMugsy">
+              Conoce mi historia 🐾
+            </button>
+            <div class="collapse mb-3" id="historiaMugsy">
+              <p class="small mb-0">
+                Mugsy llegó al refugio cuando su familia tuvo que mudarse a un lugar donde no podían tener mascotas.
+                Es un perro cariñoso que disfruta los paseos cortos y las siestas cerca de su persona favorita.
+                Busca una familia que le dé tiempo, paciencia y mucho amor.
+              </p>
             </div>
+
+            <a href="login.html" class="btn btn-cta w-100">Quiero conocer a Mugsy</a>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-lg-7 reveal">
-        <div class="card-pethome p-4 p-md-5">
-          <h4 class="fw-bold mb-4">Envíanos un mensaje</h4>
-          <form class="needs-validation" novalidate>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label fw-semibold">Nombre</label>
-                <input type="text" class="form-control form-control-pethome" required>
-                <div class="invalid-feedback">Escribe tu nombre.</div>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label fw-semibold">Correo</label>
-                <input type="email" class="form-control form-control-pethome" required>
-                <div class="invalid-feedback">Escribe un correo válido.</div>
-              </div>
-              <div class="col-12">
-                <label class="form-label fw-semibold">Asunto</label>
-                <select class="form-select form-control-pethome" required>
-                  <option value="">Selecciona una opción</option>
-                  <option>Quiero registrar mi refugio</option>
-                  <option>Tengo dudas sobre una adopción</option>
-                  <option>Reportar un problema</option>
-                  <option>Otro</option>
-                </select>
-                <div class="invalid-feedback">Selecciona un asunto.</div>
-              </div>
-              <div class="col-12">
-                <label class="form-label fw-semibold">Mensaje</label>
-                <textarea class="form-control form-control-pethome" rows="4" required></textarea>
-                <div class="invalid-feedback">Escribe tu mensaje.</div>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-cta w-100">Enviar mensaje</button>
-                <div class="alert alert-success mt-3 d-none form-success-msg">¡Gracias! Tu mensaje fue enviado (demo visual).</div>
-              </div>
+      <!-- PIBBLE -->
+      <div class="col-md-4 pet-card-item reveal" data-especie="perro">
+        <div class="card-pethome">
+          <div class="pet-photo" style="background-image:url('french.jpg');"></div>
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="fw-bold mb-1">Pibble</h5>
+              <span class="badge-estado badge-disponible">Esperando familia</span>
             </div>
-          </form>
+            <p class="mb-1 text-muted">Perro · Bulldog Francés · 1 año</p>
+            <div class="pet-personality">
+              <span class="pet-tag">Tranquilo</span>
+              <span class="pet-tag">Esterilizado</span>
+              <span class="pet-tag">Cariñoso</span>
+            </div>
+            <p class="pet-quote">“No necesito una casa grande; necesito un lugar donde me quieran.”</p>
+            <p class="mb-2 small"><strong>Refugio:</strong> Patitas Felices</p>
+
+            <button class="btn btn-link-pethome p-0 mb-2" data-bs-toggle="collapse" data-bs-target="#historiaPibble">
+              Conoce mi historia 🐾
+            </button>
+            <div class="collapse mb-3" id="historiaPibble">
+              <p class="small mb-0">
+                Pibble es un perrito calmado que se adapta bien a departamentos. Le encanta dormir cerca de las personas
+                y salir a caminar sin prisa. Está esterilizado y listo para una familia que valore la tranquilidad.
+              </p>
+            </div>
+
+            <a href="login.html" class="btn btn-cta w-100">Quiero conocer a Pibble</a>
+          </div>
         </div>
       </div>
 
+      <!-- TOBY -->
+      <div class="col-md-4 pet-card-item reveal" data-especie="perro">
+        <div class="card-pethome">
+          <div class="pet-photo" style="background-image:url('salchi.jpeg');"></div>
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="fw-bold mb-1">Toby</h5>
+              <span class="badge-estado badge-proceso">En tratamiento</span>
+            </div>
+            <p class="mb-1 text-muted">Perro · Salchicha · 4 años</p>
+            <div class="pet-personality">
+              <span class="pet-tag">Tranquilo</span>
+              <span class="pet-tag">Tímido</span>
+              <span class="pet-tag">En recuperación</span>
+            </div>
+            <p class="pet-quote">“Todavía estoy aprendiendo a confiar. ¿Me esperarías?”</p>
+            <p class="mb-2 small"><strong>Refugio:</strong> Patitas Felices</p>
+
+            <button class="btn btn-link-pethome p-0 mb-2" data-bs-toggle="collapse" data-bs-target="#historiaToby">
+              Conoce mi proceso 🐾
+            </button>
+            <div class="collapse mb-3" id="historiaToby">
+              <p class="small mb-0">
+                Toby está en tratamiento por sarna. Es un perro noble, un poco tímido, que necesita una familia paciente
+                que entienda que la recuperación también es parte del amor. Cuando te conozca, seguro te ganará el corazón.
+              </p>
+            </div>
+
+            <button class="btn btn-outline-pethome w-100" disabled>Historia en proceso</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZUKY -->
+      <div class="col-md-4 pet-card-item reveal" data-especie="perro">
+        <div class="card-pethome">
+          <div class="pet-photo" style="background-image:url('chi.jpg');"></div>
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="fw-bold mb-1">Zuky</h5>
+              <span class="badge-estado badge-disponible">Esperando familia</span>
+            </div>
+            <p class="mb-1 text-muted">Perro · Chihuahua · 2 años</p>
+            <div class="pet-personality">
+              <span class="pet-tag">Independiente</span>
+              <span class="pet-tag">Sana</span>
+              <span class="pet-tag">Vacunada</span>
+            </div>
+            <p class="pet-quote">“Soy pequeña, pero mi corazón es enorme.”</p>
+            <p class="mb-2 small"><strong>Refugio:</strong> Colitas Felices</p>
+
+            <button class="btn btn-link-pethome p-0 mb-2" data-bs-toggle="collapse" data-bs-target="#historiaZuky">
+              Conoce mi historia 🐾
+            </button>
+            <div class="collapse mb-3" id="historiaZuky">
+              <p class="small mb-0">
+                Zuky es una perrita independiente que disfruta su espacio, pero también sabe demostrar cariño cuando
+                confía. Está sana, vacunada y busca una familia que respete su ritmo y le dé un hogar seguro.
+              </p>
+            </div>
+
+            <a href="login.html" class="btn btn-cta w-100">Quiero conocer a Zuky</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAX -->
+      <div class="col-md-4 pet-card-item reveal" data-especie="gato">
+        <div class="card-pethome">
+          <div class="pet-photo" style="background-image:url('sia.jpg');"></div>
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="fw-bold mb-1">Max</h5>
+              <span class="badge-estado badge-adoptado">Ya tiene familia</span>
+            </div>
+            <p class="mb-1 text-muted">Gato · Siamés · 4 años</p>
+            <div class="pet-personality">
+              <span class="pet-tag">Protector</span>
+              <span class="pet-tag">Leal</span>
+              <span class="pet-tag">Adoptado</span>
+            </div>
+            <p class="pet-quote">“Mi historia ya tuvo final feliz. Ojalá la de otros también.”</p>
+            <p class="mb-2 small"><strong>Refugio:</strong> Colitas Felices</p>
+
+            <button class="btn btn-link-pethome p-0 mb-2" data-bs-toggle="collapse" data-bs-target="#historiaMax">
+              Lee mi final feliz 🐾
+            </button>
+            <div class="collapse mb-3" id="historiaMax">
+              <p class="small mb-0">
+                Max fue adoptado por una familia que lo eligió después de leer su historia. Hoy duerme en una cama
+                junto a la ventana y tiene un humano favorito. Su caso nos recuerda por qué hacemos esto.
+              </p>
+            </div>
+
+            <button class="btn btn-outline-pethome w-100" disabled>Ya encontró hogar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-oliva-suave">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7 reveal">
+        <h2 class="fw-bold mb-3">¿No puedes adoptar ahora?</h2>
+        <p class="mb-3">
+          También puedes ayudar sin adoptar: comparte este perfil, ofrece un hogar temporal,
+          dona alimento o acompaña a un refugio. Cada pequeño gesto cuenta.
+        </p>
+        <a href="contacto.html" class="btn btn-outline-pethome">Quiero ayudar de otra forma</a>
+      </div>
+      <div class="col-lg-5 reveal">
+        <div class="compromiso-box">
+          <h5 class="fw-bold">Antes de enviar una solicitud</h5>
+          <ul class="check-list small">
+            <li>¿Tienes tiempo y espacio para una mascota?</li>
+            <li>¿Tu familia está de acuerdo?</li>
+            <li>¿Puedes cubrir sus necesidades de salud y alimentación?</li>
+            <li>¿Entiendes que una adopción es para toda la vida?</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -129,7 +269,7 @@
         <h5>Enlaces</h5>
         <p><a href="index.html">Inicio</a></p>
         <p><a href="nosotros.html">Nosotros</a></p>
-        <p><a href="catalogo.html">Catálogo de mascotas</a></p>
+        <p><a href="contacto.html">Contacto</a></p>
       </div>
       <div class="col-md-4">
         <h5>Grupo TechCare</h5>
